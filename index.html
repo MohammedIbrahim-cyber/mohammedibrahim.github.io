@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohammed Abdul Ibrahim | SOC Command Center</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    background-color: #0b1120;
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffc3;
+}
+
+header {
+    background: #020617;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #00ffc3;
+}
+
+h1 { margin: 0; }
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #111827;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #00ffc344;
+    border-left: 4px solid #00ffc3;
+}
+
+.card h2 { margin-top: 0; }
+
+button {
+    background: transparent;
+    border: 1px solid #00ffc3;
+    color: #00ffc3;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #00ffc3;
+    color: #000;
+}
+
+.log-box {
+    background: black;
+    color: #00ff00;
+    font-family: monospace;
+    padding: 10px;
+    height: 150px;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.stat {
+    font-size: 28px;
+    color: #ff4c4c;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #020617;
+    border-top: 2px solid #00ffc3;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🛡️ SOC Command Center</h1>
+<p>Mohammed Abdul Ibrahim | Cybersecurity & Blockchain Student</p>
+</header>
+
+<div class="dashboard">
+
+<div class="card">
+<h2>🚨 Threats Detected</h2>
+<div class="stat" id="threatCount">0</div>
+<p>Simulated live threat monitoring</p>
+</div>
+
+<div class="card">
+<h2>🖥️ Live SIEM Logs</h2>
+<div class="log-box" id="logs"></div>
+</div>
+
+<div class="card">
+<h2>👨‍🎓 Education</h2>
+<p><strong>BE Computer Science (Cybersecurity & Blockchain)</strong><br>
+Guru Nanak Dev Engineering College, Bidar<br>
+Currently in 3rd Year (6th Semester)</p>
+</div>
+
+<div class="card">
+<h2>📜 Certifications</h2>
+<p>✔ Cybersecurity Fundamentals<br>
+✔ Security Awareness & Phishing Studies<br>
+✔ Self-learning in SIEM & Linux Security Labs</p>
+</div>
+
+<div class="card">
+<h2>📊 Project: Strength Checker</h2>
+<p>Web-based tool to evaluate material strength digitally.</p>
+<a href="https://strengthchecker.tiiny.site" target="_blank">
+<button>View Project</button>
+</a>
+</div>
+
+<div class="card">
+<h2>🔐 Project: Trust Score System</h2>
+<p>Security-based trust evaluation model using scoring logic & risk parameters.</p>
+</div>
+
+<div class="card">
+<h2>🌐 Communities</h2>
+<p>Member – Cyber Samurai Association<br>
+Active Participant – Google Study Club</p>
+</div>
+
+<div class="card">
+<h2>🔗 Connect</h2>
+<p>Email: reyankhan1895@gmail.com</p>
+
+<a href="https://github.com/mohammedibrahim-cyber" target="_blank">
+<button>GitHub</button>
+</a>
+
+<a href="https://www.linkedin.com/in/mohammed-abdul-ibrahim-0019b52b5" target="_blank">
+<button>LinkedIn</button>
+</a>
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 Mohammed Abdul Ibrahim | SOC Monitoring Active</p>
+</footer>
+
+<script>
+// Threat Counter Animation
+let threat = 0;
+setInterval(() => {
+    threat += Math.floor(Math.random() * 3);
+    document.getElementById("threatCount").innerText = threat;
+}, 2000);
+
+// Fake SIEM Logs
+const logs = [
+"[INFO] User login attempt detected",
+"[WARNING] Suspicious IP activity detected",
+"[ALERT] Brute force attempt blocked",
+"[INFO] Firewall rule updated",
+"[CRITICAL] Malware signature detected",
+"[INFO] System scan completed"
+];
+
+setInterval(() => {
+    const logBox = document.getElementById("logs");
+    const newLog = document.createElement("div");
+    newLog.innerText = logs[Math.floor(Math.random() * logs.length)];
+    logBox.appendChild(newLog);
+    logBox.scrollTop = logBox.scrollHeight;
+
+    if (logBox.childNodes.length > 8) {
+        logBox.removeChild(logBox.firstChild);
+    }
+}, 2000);
+</script>
+
+</body>
+</html>
