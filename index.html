@@ -4,29 +4,26 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mohammed Abdul Ibrahim | SOC Command Center</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 body {
     margin: 0;
-    background-color: #0b1120;
+    background-color: #0a0f1c;
     font-family: 'Orbitron', sans-serif;
-    color: #00ffc3;
+    color: #00e0ff;
 }
 
 header {
     background: #020617;
     padding: 20px;
     text-align: center;
-    border-bottom: 2px solid #00ffc3;
+    border-bottom: 2px solid #00e0ff;
 }
-
-h1 { margin: 0; }
 
 .dashboard {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 20px;
     padding: 20px;
 }
@@ -35,24 +32,27 @@ h1 { margin: 0; }
     background: #111827;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 15px #00ffc344;
-    border-left: 4px solid #00ffc3;
+    border-left: 4px solid #00e0ff;
+    box-shadow: 0 0 15px #00e0ff33;
 }
-
-.card h2 { margin-top: 0; }
 
 button {
     background: transparent;
-    border: 1px solid #00ffc3;
-    color: #00ffc3;
+    border: 1px solid #00e0ff;
+    color: #00e0ff;
     padding: 8px 15px;
     cursor: pointer;
     margin-top: 10px;
 }
 
 button:hover {
-    background: #00ffc3;
+    background: #00e0ff;
     color: #000;
+}
+
+canvas {
+    width: 100% !important;
+    height: 200px !important;
 }
 
 .log-box {
@@ -65,16 +65,11 @@ button:hover {
     font-size: 12px;
 }
 
-.stat {
-    font-size: 28px;
-    color: #ff4c4c;
-}
-
 footer {
     text-align: center;
     padding: 15px;
     background: #020617;
-    border-top: 2px solid #00ffc3;
+    border-top: 2px solid #00e0ff;
 }
 </style>
 </head>
@@ -84,14 +79,42 @@ footer {
 <header>
 <h1>🛡️ SOC Command Center</h1>
 <p>Mohammed Abdul Ibrahim | Cybersecurity & Blockchain Student</p>
+
+<a href="Mohammed_Abdul_Ibrahim_Resume.pdf" download>
+<button>Download Resume</button>
+</a>
 </header>
 
 <div class="dashboard">
 
 <div class="card">
-<h2>🚨 Threats Detected</h2>
-<div class="stat" id="threatCount">0</div>
-<p>Simulated live threat monitoring</p>
+<h2>🎓 Education</h2>
+<p><strong>Bachelor of Engineering (B.E.) – Computer Science Engineering</strong><br>
+Specialization: Cyber Security and Blockchain<br>
+Guru Nanak Dev Engineering College, Bidar<br>
+Currently in 3rd Year – 6th Semester</p>
+</div>
+
+<div class="card">
+<h2>📜 Certifications</h2>
+<p>
+• Google Cybersecurity Professional Certificate – Coursera (Dec 2024)<br>
+• Introduction to Cybersecurity – Cisco Networking Academy (Apr 2025)<br>
+• Microsoft Cybersecurity Architect – Microsoft Learn (Oct 2025)<br>
+• Introduction to Cloud Computing (Feb 2026)<br>
+• Generative AI Mastermind – Outskill<br>
+• Google Cloud Arcade Program – Google Cloud Skills Boost
+</p>
+</div>
+
+<div class="card">
+<h2>📊 Skills Distribution</h2>
+<canvas id="skillsChart"></canvas>
+</div>
+
+<div class="card">
+<h2>📈 Threat Monitoring Simulation</h2>
+<canvas id="threatChart"></canvas>
 </div>
 
 <div class="card">
@@ -100,41 +123,24 @@ footer {
 </div>
 
 <div class="card">
-<h2>👨‍🎓 Education</h2>
-<p><strong>BE Computer Science (Cybersecurity & Blockchain)</strong><br>
-Guru Nanak Dev Engineering College, Bidar<br>
-Currently in 3rd Year (6th Semester)</p>
+<h2>🚀 Projects</h2>
+<strong>Trust Score Application</strong><br>
+Web-based trust evaluation system using scoring logic aligned with security awareness concepts.<br><br>
+
+<strong>Strength Checker Tool</strong><br>
+Concrete Mix Design Calculator for material strength estimation.
 </div>
 
 <div class="card">
-<h2>📜 Certifications</h2>
-<p>✔ Cybersecurity Fundamentals<br>
-✔ Security Awareness & Phishing Studies<br>
-✔ Self-learning in SIEM & Linux Security Labs</p>
-</div>
-
-<div class="card">
-<h2>📊 Project: Strength Checker</h2>
-<p>Web-based tool to evaluate material strength digitally.</p>
-<a href="https://strengthchecker.tiiny.site" target="_blank">
-<button>View Project</button>
-</a>
-</div>
-
-<div class="card">
-<h2>🔐 Project: Trust Score System</h2>
-<p>Security-based trust evaluation model using scoring logic & risk parameters.</p>
-</div>
-
-<div class="card">
-<h2>🌐 Communities</h2>
-<p>Member – Cyber Samurai Association<br>
-Active Participant – Google Study Club</p>
+<h2>🏆 Activities & Leadership</h2>
+• Volunteer Organizer – Hacktober 2025, Cyber Security Awareness Week<br>
+• Member – Cyber Samurai Association<br>
+• Member – Google Study Club
 </div>
 
 <div class="card">
 <h2>🔗 Connect</h2>
-<p>Email: reyankhan1895@gmail.com</p>
+Email: reyankhan1895@gmail.com<br><br>
 
 <a href="https://github.com/mohammedibrahim-cyber" target="_blank">
 <button>GitHub</button>
@@ -148,24 +154,53 @@ Active Participant – Google Study Club</p>
 </div>
 
 <footer>
-<p>© 2026 Mohammed Abdul Ibrahim | SOC Monitoring Active</p>
+© 2026 Mohammed Abdul Ibrahim | SOC Monitoring Active
 </footer>
 
-<script>
-// Threat Counter Animation
-let threat = 0;
-setInterval(() => {
-    threat += Math.floor(Math.random() * 3);
-    document.getElementById("threatCount").innerText = threat;
-}, 2000);
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-// Fake SIEM Logs
+<script>
+// Skills Chart
+new Chart(document.getElementById('skillsChart'), {
+    type: 'bar',
+    data: {
+        labels: ['Risk Analysis','SIEM','Linux','SQL','Python','Networking'],
+        datasets: [{
+            label: 'Skill Level',
+            data: [80, 70, 75, 70, 65, 75],
+            backgroundColor: '#00e0ff'
+        }]
+    }
+});
+
+// Threat Chart
+let threatData = [5,8,6,9,7,10];
+setInterval(() => {
+    threatData.shift();
+    threatData.push(Math.floor(Math.random() * 15));
+    threatChart.update();
+}, 3000);
+
+const threatChart = new Chart(document.getElementById('threatChart'), {
+    type: 'line',
+    data: {
+        labels: ['1','2','3','4','5','6'],
+        datasets: [{
+            label: 'Threat Events',
+            data: threatData,
+            borderColor: '#ff4c4c',
+            fill: false
+        }]
+    }
+});
+
+// Fake Logs
 const logs = [
-"[INFO] User login attempt detected",
-"[WARNING] Suspicious IP activity detected",
-"[ALERT] Brute force attempt blocked",
-"[INFO] Firewall rule updated",
+"[INFO] User login detected",
+"[ALERT] Suspicious IP blocked",
 "[CRITICAL] Malware signature detected",
+"[INFO] Firewall rules updated",
+"[WARNING] Failed login attempt",
 "[INFO] System scan completed"
 ];
 
@@ -175,12 +210,10 @@ setInterval(() => {
     newLog.innerText = logs[Math.floor(Math.random() * logs.length)];
     logBox.appendChild(newLog);
     logBox.scrollTop = logBox.scrollHeight;
-
     if (logBox.childNodes.length > 8) {
         logBox.removeChild(logBox.firstChild);
     }
 }, 2000);
 </script>
 
-</body>
-</html>
+</body
